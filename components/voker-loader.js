@@ -17,9 +17,8 @@ export const VokerContainer = forwardRef(({ children }, ref) => (
     ref={ref}
     className="voker"
     m="auto"
-    mt={['-20px', '-60px', '-120px']}
-    mb={['-40px', '-140px', '-200px']}
-    w={[280, 480, 640]}
+    mr={[20, 60, 120]}
+    w={[80, 100, 640]}
     h={[280, 480, 640]}
     position="relative"
   >

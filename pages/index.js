@@ -32,7 +32,7 @@ const Home = () => (
         <Image
           display="flex"
           alignSelf="center"
-          src="https://i.imgur.com/Hw0G5.png"
+          src="/images/letter.png"
           alt="Profile image"
         />
         <Paragraph>

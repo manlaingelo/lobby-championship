@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
-import { Box, Container } from '@chakra-ui/react'
-// import Footer from '../footer'
+import { Box, Container, Flex } from '@chakra-ui/react'
 import VokerLoader from '../voker-loader'
 
 const LazyVoker = dynamic(() => import('../voker'), {
@@ -17,14 +16,13 @@ const Main = ({ children, router }) => {
         <title>IT18 forever!!!</title>
       </Head>
 
-      <NavBar path={router.asPath} />
+      <NavBar position="relative" path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="xxl" pt={14} centerContent>
+        <Flex direction={['column', 'row', 'row']}>
         <LazyVoker />
-
-        {children}
-
-        {/* <Footer /> */}
+          {children}
+        </Flex>
       </Container>
     </Box>
   )
