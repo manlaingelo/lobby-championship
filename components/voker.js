@@ -53,7 +53,7 @@ const Voker = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.0001 + 3.5
+      const scale = scH * 0.0001 + 4.2
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -66,7 +66,7 @@ const Voker = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 10)
       scene.add(ambientLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
@@ -74,7 +74,7 @@ const Voker = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/voker.gltf', {
+      loadGLTFModel(scene, '/sf.gltf', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
