@@ -2,25 +2,25 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container, Flex } from '@chakra-ui/react'
-import VokerLoader from '../voker-loader'
+import ModelLoader from '../model-loader'
 
-const LazyVoker = dynamic(() => import('../voker'), {
+const LazyNevermore = dynamic(() => import('../model-sf'), {
   ssr: false,
-  loading: () => <VokerLoader />
+  loading: () => <ModelLoader />
 })
 
 const Main = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
       <Head>
-        <title>IT18 forever!!!</title>
+        <title>the ITnatioanal - 2021</title>
       </Head>
 
       <NavBar position="relative" path={router.asPath} />
 
       <Container maxW="xxl" pt={14} centerContent>
         <Flex direction={['column', 'row', 'row']}>
-        <LazyVoker />
+          <LazyNevermore />
           {children}
         </Flex>
       </Container>
