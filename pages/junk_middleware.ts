@@ -9,6 +9,7 @@ export function middleware(req: NextRequest) {
             return
         }
         else {
+            // return NextResponse.redirect('/');
             return NextResponse.redirect('/uninvited');
         }
     }

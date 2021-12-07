@@ -1,21 +1,28 @@
-import { Container, Box, Image, useColorModeValue } from '@chakra-ui/react'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import Paragraph from '../components/paragraph'
+// import { Container, Box, Image, useColorModeValue } from '@chakra-ui/react'
+// import { useRouter } from 'next/router'
+// import { useEffect, useState } from 'react'
+// import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
+// import Section from '../components/section'
 
 const Home = () => {
-  const router = useRouter()
-  const [name, setName] = useState()
-  useEffect(() => {
-    if (router.asPath !== router.route) {
-      setName(router.query.name)
-    }
-  }, [router])
+  // const router = useRouter()
+  // const [name, setName] = useState()
+  // useEffect(() => {
+  //   if (router.asPath !== router.route) {
+  //     setName(router.query.name)
+  //   }
+  // }, [router])
   return (
     <Layout>
-      <Container>
+      Би та нарт (zolbood) гомдлоо.
+      <br/>
+      Гэнэтийн нөхцөл байдалтай холбоотойгоор
+      <br/>
+      12-11 эсвэл 12-10ны орой хаалтын үйл ажиллагааг
+      <br/>
+      явуулах болсон тул хонох сэтгэлээ бэлдэнэ үү.
+      {/* <Container>
         <Box
           borderRadius="lg"
           mb={6}
@@ -57,7 +64,7 @@ const Home = () => {
             Урьсан: Майкланжело .<br />
           </Paragraph>
         </Section>
-      </Container>
+      </Container> */}
     </Layout>
   )
 }
